@@ -37,7 +37,7 @@ app.AppView = Backbone.View.extend({
 				remaining: remaining
 			}));
 
-			this.$('#footer la a')
+			this.$('#footer li a')
 					.removeClass('selected')
 					.filter('[href="#/' + ( app.TodoFilter || '' ) + '"]')
 					.addClass('selected');
@@ -51,7 +51,7 @@ app.AppView = Backbone.View.extend({
 	},
 
 	addOne: function( todo ) {
-		var view = new App.TodoView({model: todo});
+		var view = new app.TodoView({model: todo});
 		$('#todo-list').append(view.render().el);
 	},
 
@@ -95,7 +95,7 @@ app.AppView = Backbone.View.extend({
 		app.Todos.each(function(todo) {
 			todo.save({
 				'completed' : completed
-			})
+			});
 		});
 	}
-}) 
+});
