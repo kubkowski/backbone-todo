@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ToDo List - Backbone JS</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
 
@@ -38,9 +39,9 @@
 
 <script type="text/template" id="stats-template">
 	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
-		<ul class="filters">
+		<ul id="filters">
 			<li>
-				<a class="selected" href="#/">All</a>
+				<a id="selected" href="#/">All</a>
 			</li>
 			<li>
 				<a href="#/active">Active</a>
